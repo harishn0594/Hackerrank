@@ -1,0 +1,18 @@
+def repeatedString(s, n):
+    acount = 0
+    atailcount = 0
+    m = len(s) 
+    
+    for i in s:
+        if i is 'a':
+            acount += 1
+       
+    iters = int(n/m)
+    rem = n%m
+    
+    for j in s[0:rem]:
+        if j is 'a':
+            atailcount += 1
+            
+        
+    return int((acount * iters) + atailcount)
