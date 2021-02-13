@@ -10,7 +10,7 @@ def minion_game(string):
 
     for i in range(len(string)):
         if string[i] in vowels:
-            # Why eat up mempry when you have simple combinatorics
+            # Why eat up memory when you have simple combinatorics
             # for j in range(i, len(string)):
                 # wordswithvowels.append(string[i:j+1])
             points1 += len(string) - i
