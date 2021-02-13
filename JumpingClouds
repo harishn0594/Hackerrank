@@ -7,12 +7,12 @@ def jumpingOnClouds(c):
         else:
             if c[i+1] == 0:
                 if (i+1) == len(c)-1 or c[i+2] == 1:
-                    i = i + 1
+                    i += 1
                 else:
-                    i = i + 2
+                    i += 2
             elif c[i+1] == 1:
-                i = i + 2
+                i += 2
            
-        count = count + 1
+        count += 1
             
     return count
