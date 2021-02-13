@@ -1,0 +1,32 @@
+def minion_game(string):
+    # your code goes here
+
+    vowels = ["A", "E", "I", "O", "U"]
+
+    wordswithvowels = []
+    worsdswithcons = []
+    points1 = 0
+    points2 = 0
+
+    for i in range(len(string)):
+        if string[i] in vowels:
+            # Why eat up mempry when you have simple combinatorics
+            # for j in range(i, len(string)):
+                # wordswithvowels.append(string[i:j+1])
+            points1 += len(string) - i
+        else:
+            # for j in range(i, len(string)):
+                # worsdswithcons.append(string[i:j+1])
+            points2 += len(string) - i
+
+    if points1 > points2:
+        print("Kevin " + str(points1))
+    elif points1 < points2:
+        print("Stuart " + str(points2))
+    else:
+        print("Draw")
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
