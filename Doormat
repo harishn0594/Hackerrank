@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    m, n = map(int, input().split())
+
+    sym = ".|."
+
+    for i in range((m-1)//2):
+        print((sym * i).rjust((n - 3) // 2, '-') + sym + (sym * i).ljust((n - 3) // 2, '-'))
+
+    print("WELCOME".center(n, '-'))
+
+    for i in range((m-1)//2 - 1, -1, -1):
+        print((sym * i).rjust((n - 3) // 2, '-') + sym + (sym * i).ljust((n - 3) // 2, '-'))
